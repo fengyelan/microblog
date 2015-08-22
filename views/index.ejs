@@ -1,0 +1,13 @@
+<% if(!user){ %>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h1>欢迎来到Microblog</h1>
+            <p>Microblog是一个基于nodejs的微博系统</p>
+            <a class="btn btn-primary btn-large" href="/login">登录</a>
+            <a class="btn btn-large" href="/reg">注册</a>
+        </div>
+    </div>
+<% } else {%>
+<%- partial('say') %>
+<% } %>
+<%- partial('posts',{posts:posts}) %>
